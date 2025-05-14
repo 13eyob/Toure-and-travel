@@ -1,0 +1,130 @@
+/* General Section Style */
+section.package {
+    padding: 50px 10%;
+    background: #f8f8f8;
+}
+
+.package .heading-title {
+    font-size: 3rem; /* Increased from 2.5rem */
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4b2a6e;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Grid for package boxes */
+.package .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Each box */
+.package .box {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.package .box:hover {
+    transform: translateY(-5px);
+}
+
+/* Image inside box */
+.package .box .image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.package .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content inside box */
+.package .box .content {
+    padding: 20px;
+}
+
+.package .box .content h3 {
+    font-size: 1.7rem; /* Increased from 1.4rem */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.package .box .content .location {
+    font-size: 1.1rem; /* Increased from 0.9rem */
+    color: #e67e22; /* Orange for icon/text */
+    margin-bottom: 10px;
+}
+
+.package .box .content .location i {
+    color: #e67e22;
+    margin-right: 5px;
+}
+
+/* Description text */
+.package .box .content p {
+    font-size: 1.1rem; /* Increased from 0.95rem */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Price styling */
+.package .box .content .price {
+    font-size: 1.3rem; /* Increased from 1.1rem */
+    color: #4b2a6e;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.package .box .content .price span {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+/* Book Now Button */
+.package .box .content .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #444; /* Light black */
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.package .box .content .btn:hover {
+    background: var(--main-color);
+    transform: translateY(-3px);; /* Purple on hover */
+}
+
+/* Load More Button */
+.load-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.load-more .btn {
+    padding: 14px 35px;
+    background: #4b2a6e;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.load-more .btn:hover {
+    background: #6b4fa3;
+}
