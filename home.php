@@ -22,8 +22,8 @@
     <nav class="navbar">
         <a href="home.php">Home</a>
         <a href="about.php">About</a>
-        <a href="package.php">Package</a>
-        <a href="book.php">Book</a>
+         <a href="contact.php">Contact</a>
+        <a href="login_register.php" class="login-btn">Login</a>
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
 </section>
@@ -115,7 +115,7 @@
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Amhara Region, Ethiopia</div>
                 <p>Explore the 11 medieval monolithic cave churches carved entirely from rock.</p>
                 <div class="price">From $299 <span>$399</span></div>
-                <a href="book.php" class="btn">Book Now</a>
+                <a href="login_register.php" class="btn">login</a>
             </div>
         </div>
 
@@ -126,7 +126,7 @@
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Gondar, Ethiopia</div>
                 <p>Visit the 17th-century fortress city of Gondar with its impressive castles and history.</p>
                 <div class="price">From $249 <span>$329</span></div>
-                <a href="book.php" class="btn">Book Now</a>
+                <a href="login_register.php" class="btn">login</a>
             </div>
         </div>
 
@@ -137,7 +137,7 @@
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Tigray Region, Ethiopia</div>
                 <p>Discover the ancient kingdom of Aksum with its obelisks and legends.</p>
                 <div class="price">From $349 <span>$449</span></div>
-                <a href="book.php" class="btn">Book Now</a>
+                <a href="login_register.php" class="btn">Login </a>
             </div>
         </div>
 
@@ -148,7 +148,7 @@
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Simien National Park</div>
                 <p>3-day trekking adventure to see geladas, walia ibex, and stunning cliffs.</p>
                 <div class="price">From $499 <span>$599</span></div>
-                <a href="book.php" class="btn">Book Now</a>
+                <a href="login_register.php" class="btn">Login </a>
             </div>
         </div>
 
@@ -159,7 +159,7 @@
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Bale Zone, Ethiopia</div>
                 <p>Explore Africa’s largest cave system with a guide and headlamp.</p>
                 <div class="price">From $199 <span>$279</span></div>
-                <a href="book.php" class="btn">Book Now</a>
+                <a href="login_register.php" class="btn">Login </a>
             </div>
         </div>
 
@@ -170,14 +170,14 @@
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Near Bahir Dar</div>
                 <p>Day trip to "Smoking Water" falls and a boat ride to Lake Tana monasteries.</p>
                 <div class="price">From $179 <span>$249</span></div>
-                <a href="book.php" class="btn">Book Now</a>
+                <a href="login_register.php" class="btn">Login</a>
             </div>
         </div>
 
     </div>
 </section>
 
-<!-- Footer Section -->
+<!-- Footer Section starts -->
 <section class="footer">
     <div class="box-container">
 
@@ -216,27 +216,14 @@
     <div class="credit">Created by <span>Mr. Eyob</span> | All rights reserved!</div>
 </section>
 
+<!-- Footer Section ends -->
+
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 <!-- Custom JS -->
 <script src="js/script.js"></script>
 
-<script>
-// Swiper init
-var swiper = new Swiper(".home-slider", {
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-</script>
 
 </body>
 </html>

@@ -23,15 +23,15 @@
     <nav class="navbar">
         <a href="home.php">Home</a>
         <a href="about.php">About</a>
-        <a href="package.php">Package</a>
-        <a href="book.php">Book</a>
+        <a href="contact.php">Contact</a>
+        <a href="logout.php">Logout</a>
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
 </section>
 <!-- Header Section End -->
 
 <!-- Page Title -->
-<div class="heading" style="background: #4b2a6e;">
+<div class="heading" style="background: url('images/bg4.jpg') no-repeat center center; background-size: cover;">
     <h1>Package</h1>
 </div>
 

@@ -19,8 +19,9 @@
        <nav class="navbar">
            <a href="home.php">Home</a>
            <a href="about.php" class="active">About</a>
-           <a href="package.php">Package</a>
-           <a href="book.php">Book</a>
+          
+           <a href="contact.php">Contact</a>
+           <a href="login.php" class="login-btn">Login</a>
        </nav>
        <div id="menu-btn" class="fas fa-bars"></div>
    </header>
