@@ -19,9 +19,8 @@
        <nav class="navbar">
            <a href="home.php">Home</a>
            <a href="about.php" class="active">About</a>
-          
            <a href="contact.php">Contact</a>
-           <a href="login.php" class="login-btn">Login</a>
+           <a href="login_register.php" class="login-btn">Login</a>
        </nav>
        <div id="menu-btn" class="fas fa-bars"></div>
    </header>
@@ -49,8 +48,8 @@
                <h3>quick links</h3>
                <a href="home.php"> <i class="fas fa-angle-right"></i> Home</a>
                <a href="about.php"> <i class="fas fa-angle-right"></i> About</a>
-               <a href="package.php"> <i class="fas fa-angle-right"></i> Package</a>
-               <a href="book.php"> <i class="fas fa-angle-right"></i> Book</a>
+             <a href="contact.php"><i class="fas fa-angle-right"></i>Contact</a>
+            <a href="Gallery.php"><i class="fas fa-angle-right"></i>Gallery</a>
            </div>
 
            <div class="box">

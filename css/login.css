@@ -1,131 +1,118 @@
-/* style.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins :wght@200;400;500;600;700;800;900&display=swap');
-
+/* Reset & Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: url('../images/bg11.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: brightness(0.9);
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
+/* Message Styles */
 .message {
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    width: 350px;
-    margin: auto;
-    border-radius: 5px;
+    padding: 15px 25px;
     margin-bottom: 20px;
-    transition: opacity 0.3s ease;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .message.error {
-    color: #d8000c;
-    background-color: #ffd2d2;
-    border: 1px solid #ffb2b2;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
 }
 
 .message.success {
-    color: #1f631d;
-    background-color: #ccffcc;
-    border: 1px solid #99e699;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
 }
 
+/* Form Container */
 .form {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    color: #fff;
-    border-radius: 15px;
-    padding: 40px 30px;
-    width: 400px;
-    text-align: center;
-    transition: all 0.3s ease;
-    opacity: 1;
-    transform: translateY(0);
+    background: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease-in-out;
 }
 
 .form h1 {
-    font-size: 32px;
     margin-bottom: 25px;
-    letter-spacing: 1px;
+    text-align: center;
+    color: #333;
 }
 
+/* Input Field Styles */
 .input {
-    position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .input input {
     width: 100%;
-    height: 50px;
-    background: transparent;
-    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 0 45px 0 20px;
-    transition: border-color 0.3s ease;
-}
-
-.input input::placeholder {
-    color: #ddd;
-}
-
-.input i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #aaa;
+    transition: border-color 0.2s ease-in-out;
 }
 
 .input input:focus {
-    border-color: #fff;
+    border-color: #2193b0;
 }
 
+/* Submit Button */
 .input input[type="submit"] {
-    background-color: #ffffff;
-    color: #333;
-    font-weight: 600;
+    background-color: #2193b0;
+    color: white;
+    font-weight: bold;
+    border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .input input[type="submit"]:hover {
-    background-color: #f0f0f0;
+    background-color: #1b7ca0;
 }
 
+/* Toggle Button */
 .toggle-btn {
-    margin-top: 15px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .toggle-btn button {
     background: none;
     border: none;
-    color: #fff;
+    color: #2193b0;
+    cursor: pointer;
     font-size: 14px;
     text-decoration: underline;
-    cursor: pointer;
-    font-weight: 500;
+    padding: 5px;
+    transition: color 0.2s;
 }
 
 .toggle-btn button:hover {
-    opacity: 0.8;
+    color: #1b7ca0;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .form {
+        padding: 20px;
+    }
 }
