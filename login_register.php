@@ -93,7 +93,7 @@ $conn->close();
     <meta charset="UTF-8">
     <title>Login/Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
@@ -117,14 +117,14 @@ $conn->close();
                 <input type="submit" name="login" value="Login">
             </div>
             <div class="toggle-btn">
-                <button type="button" onclick="showRegister()">Don't have an account? Register</button>
+                <button type="button" onclick="showRegister()">Don't have an account? Sign Up</button>
             </div>
         </form>
     </div>
 
     <!-- Register Form -->
     <div class="form" id="registerForm" style="display:none;">
-        <h1>Register</h1>
+        <h1>Sign Up</h1>
         <form action="" method="POST">
             <div class="input">
                 <input type="text" name="fullname" placeholder="Full Name" required>
@@ -139,7 +139,8 @@ $conn->close();
                 <input type="password" name="password" placeholder="Password" required>
             </div>
             <div class="input">
-                <input type="submit" name="register" value="Register">
+              <input type="submit" name="register" value="Sign Up">
+
             </div>
             <div class="toggle-btn">
                 <button type="button" onclick="showLogin()">Already have an account? Login</button>

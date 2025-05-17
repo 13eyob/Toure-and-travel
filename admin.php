@@ -54,7 +54,7 @@ $total_completed = countTableRows($conn, "bookings", "status = 'completed'");
     <title>Ethiopian Tourism Admin Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="css/admin.css">
 
 </head>
 <body>
@@ -69,12 +69,11 @@ $total_completed = countTableRows($conn, "bookings", "status = 'completed'");
                 <h1>Ethiopian Tourism Admin</h1>
                 <ul>
                     <li><a href="admin.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                    <li><a href="tourists.php"><i class="fas fa-users"></i> Tourists</a></li>
+                    <li><a href="users.php"><i class="fas fa-users"></i> Users</a></li>
                     <li><a href="add_packages.php"><i class="fas fa-plus-circle"></i> Add Package</a></li>
                     <li><a href="crud.php"><i class="fas fa-eye"></i> View Packages</a></li>
-                    <li><a href="bookings.php"><i class="fas fa-calendar-check"></i> Bookings</a></li>
-                    <li><a href="reviews.php"><i class="fas fa-star"></i> Reviews</a></li>
-                    <li><a href="admin_messages.php"><i class="fas fa-envelope"></i> Inquiries</a></li>
+                    <li><a href="booking.php"><i class="fas fa-calendar-check"></i> Bookings</a></li>
+                    <li><a href="messages.php"><i class="fas fa-envelope"></i> Messeges</a></li>
                 </ul>
             </div>
         </div>
@@ -109,12 +108,7 @@ $total_completed = countTableRows($conn, "bookings", "status = 'completed'");
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="tot">
-                        <h3>Completed Tours</h3>
-                        <p><?php echo $total_completed; ?></p>
-                    </div>
-                </div>
+              
             </div>
         </div>
     </div>

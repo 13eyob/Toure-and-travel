@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 }
 
 $host = 'localhost';
-$dbname = 'travel';
+$dbname = 'travel'; // Changed to tourism database
 $username = 'root';
 $password = '';
 
@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 }
 
 $message = '';
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_package'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_packages'])) {
     $title = trim($conn->real_escape_string($_POST['title']));
     $description = trim($conn->real_escape_string($_POST['description']));
     $location = trim($conn->real_escape_string($_POST['location']));
@@ -32,15 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_package'])) {
         $message = 'Price and duration must be valid numbers';
     }
 
-    // Image upload handling
     $image_path = '';
-    if (isset($_FILES['image_path']) && $_FILES['image_path']['error'] !== UPLOAD_ERR_NO_FILE) {
+    if (isset($_FILES['image_path'])) {
         if ($_FILES['image_path']['error'] === UPLOAD_ERR_OK) {
             $uploadDir = 'images/';
             if (!is_dir($uploadDir)) {
-                if (!mkdir($uploadDir, 0755, true)) {
-                    $message = 'Failed to create images directory';
-                }
+                mkdir($uploadDir, 0755, true);
             }
             
             $check = getimagesize($_FILES['image_path']['tmp_name']);
@@ -55,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_package'])) {
                     if (move_uploaded_file($_FILES['image_path']['tmp_name'], $targetPath)) {
                         $image_path = $targetPath;
                     } else {
-                        $message = 'Error uploading file. Check directory permissions.';
+                        $message = 'Error uploading file';
                     }
                 } else {
                     $message = 'Invalid file type. Allowed: JPG, JPEG, PNG, GIF';
@@ -75,19 +72,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_package'])) {
                                VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         
         if ($stmt === false) {
-            $message = 'SQL Error: ' . $conn->error;
-        } else {
-            $stmt->bind_param("sssidssi", $title, $description, $location, $duration, $price, $discount_price, $image_path, $is_featured);
-            
-            if ($stmt->execute()) {
-                $message = 'Package added successfully!';
-                // Clear form after successful submission
-                $_POST = array();
-            } else {
-                $message = 'Error: ' . $stmt->error;
-            }
-            $stmt->close();
+            die("SQL Error: " . $conn->error);
         }
+        
+        $stmt->bind_param("sssidssi", $title, $description, $location, $duration, $price, $discount_price, $image_path, $is_featured);
+        
+        if ($stmt->execute()) {
+            $message = 'Package added successfully!';
+        } else {
+            $message = 'Error: ' . $stmt->error;
+        }
+        $stmt->close();
     }
 }
 ?>
@@ -97,9 +92,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_package'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Tour Package</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
 </head>
 <body>
     <input type="checkbox" id="check">
@@ -113,12 +109,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_package'])) {
                 <h1>Ethiopian Tourism Admin</h1>
                 <ul>
                     <li><a href="admin.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                    <li><a href="tourists.php"><i class="fas fa-users"></i> Tourists</a></li>
-                    <li><a href="add_packages.php" class="active"><i class="fas fa-plus-circle"></i> Add Package</a></li>
-                    <li><a href="packages.php"><i class="fas fa-eye"></i> View Packages</a></li>
-                    <li><a href="bookings.php"><i class="fas fa-calendar-check"></i> Bookings</a></li>
-                    <li><a href="reviews.php"><i class="fas fa-star"></i> Reviews</a></li>
-                    <li><a href="admin_messages.php"><i class="fas fa-envelope"></i> Inquiries</a></li>
+                    <li><a href="users.php"><i class="fas fa-users"></i> Users</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-plus-circle"></i> Add Package</a></li>
+                    <li><a href="crud.php"><i class="fas fa-eye"></i> View Packages</a></li>
+                    <li><a href="booking.php"><i class="fas fa-calendar-check"></i> Bookings</a></li>
+                    <li><a href="messages.php"><i class="fas fa-envelope"></i> messages</a></li>
                 </ul>
             </div>
         </div>
@@ -137,29 +132,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_package'])) {
             <?php endif; ?>
             <div>
                 <form action="add_packages.php" method="POST" enctype="multipart/form-data">
+
                     <div class="products">
                         <label for="title">Package Title</label>
-                        <input type="text" name="title" id="title" value="<?php echo isset($_POST['title']) ? htmlspecialchars($_POST['title']) : ''; ?>" required>
+                        <input type="text" name="title" id="title" required>
                     </div>
                     <div class="products">
                         <label for="description">Description</label>
-                        <textarea name="description" id="description" required><?php echo isset($_POST['description']) ? htmlspecialchars($_POST['description']) : ''; ?></textarea>
+                        <textarea name="description" id="description" required></textarea>
                     </div>
                     <div class="products">
                         <label for="location">Location</label>
-                        <input type="text" name="location" id="location" value="<?php echo isset($_POST['location']) ? htmlspecialchars($_POST['location']) : ''; ?>" required>
+                        <input type="text" name="location" id="location" required>
                     </div>
                     <div class="products">
                         <label for="duration">Duration (days)</label>
-                        <input type="number" name="duration" id="duration" min="1" value="<?php echo isset($_POST['duration']) ? htmlspecialchars($_POST['duration']) : ''; ?>" required>
+                        <input type="number" name="duration" id="duration" min="1" required>
                     </div>
                     <div class="products">
                         <label for="price">Price ($)</label>
-                        <input type="number" name="price" id="price" step="0.01" min="0" value="<?php echo isset($_POST['price']) ? htmlspecialchars($_POST['price']) : ''; ?>" required>
+                        <input type="number" name="price" id="price" step="0.01" min="0" required>
                     </div>
                     <div class="products">
                         <label for="discount_price">Discount Price ($) - Optional</label>
-                        <input type="number" name="discount_price" id="discount_price" step="0.01" min="0" value="<?php echo isset($_POST['discount_price']) ? htmlspecialchars($_POST['discount_price']) : ''; ?>">
+                        <input type="number" name="discount_price" id="discount_price" step="0.01" min="0">
                     </div>
                     <div class="products">
                         <label for="image_path">Package Image</label>
@@ -168,16 +164,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_package'])) {
                     </div>
                     <div class="products">
                         <label class="featured-label">
-                            <input type="checkbox" name="is_featured" id="is_featured" value="1" <?php echo isset($_POST['is_featured']) ? 'checked' : ''; ?>>
-                            Feature this package on homepage
+                            <input type="checkbox" name="is_featured" id="is_featured" value="1">
+                            Feature this package on packages
                         </label>
                     </div>
                     <div class="products">
-                        <input type="submit" name="add_package" value="Add Package" class="btn">
+                        <input type="submit" name="add_packages" value="Add Package" class="btn">
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </body>
-</html> 
+</html>

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylee.css">
 </head>
 <body>
 
@@ -37,7 +37,7 @@
                 <div class="content">
                     <span>Explore, Discover, Ethiopia</span>
                     <h3>Travel around Ethiopia</h3>
-                    <a href="package.php" class="btn">Discover More</a>
+                    <a href="login_register.php" class="btn">Discover More</a>
                 </div>
             </div>
 
@@ -98,7 +98,7 @@
     </div>
     <div class="content">
         <h3>About us</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsam corrupti ipsa, voluptates enim illum error odio aut dolore cupiditate.</p>
+       <p>Ethiopia, the cradle of humankind and land of origins, welcomes you to discover its ancient wonders and breathtaking landscapes. From the rock-hewn churches of Lalibela to the towering peaks of the Simien Mountains, our country offers unparalleled cultural heritage and natural beauty. </p>
         <a href="about.php" class="btn">Read More</a>
     </div>
 </section>

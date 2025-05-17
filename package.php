@@ -37,7 +37,7 @@ if(isset($_GET['search'])) {
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="eyob.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylee.css">
 </head>
 <body>
 
@@ -81,13 +81,12 @@ if(isset($_GET['search'])) {
                 <p class="tour-location"><i class="fas fa-map-marker-alt"></i> <?php echo htmlspecialchars($row['location']); ?></p>
                 <p class="tour-description"><?php echo substr(htmlspecialchars($row['description']), 0, 100); ?>...</p>
                 <div class="tour-meta">
-                    <span class="tour-duration"><i class="fas fa-calendar-alt"></i> <?php echo htmlspecialchars($row['duration']); ?> days</span>
-                    <span class="tour-price">
-                        <?php if($row['discount_price'] > 0): ?>
-                            <span class="original-price">ETB<?php echo number_format($row['price'], 2); ?></span>
-                            <span class="discounted-price">ETB<?php echo number_format($row['discount_price'], 2); ?></span>
+                    
+                       <?php if($row['discount_price'] > 0): ?>
+                           
+                            <span class="discounted-price">$<?php echo number_format($row['discount_price'], 2); ?></span>
                         <?php else: ?>
-                            ETB<?php echo number_format($row['price'], 2); ?>
+                            $<?php echo number_format($row['price'], 2); ?>
                         <?php endif; ?>
                     </span>
                 </div>

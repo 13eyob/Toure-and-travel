@@ -9,7 +9,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/stylee.css">
      <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
@@ -36,8 +36,9 @@
        </div>
        <div class="content">
            <h3>Why Choose Us</h3>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate et cum, facilis consequuntur sint dolor mollitia nihil in dignissimos libero tenetur unde porro veniam fugiat necessitatibus excepturi adipisci atque nesciunt!</p>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate et cum, facilis consequuntur sint dolor mollitia nihil in dignissimos libero tenetur unde porro veniam fugiat necessitatibus excepturi adipisci atque nesciunt!</p>
+          <p>We specialize in offering authentic, immersive travel experiences that showcase the true beauty of Ethiopia — from the ancient rock-hewn churches of Lalibela and breathtaking Simien Mountains to the vibrant cultures of the Omo Valley tribes. Our itineraries are carefully crafted to give you a deeper understanding of this unique and historic country.</p>
+
+          <p>As the only African country never colonized, we've preserved our unique identity across millennia. Taste the birthplace of coffee in traditional ceremonies, witness the spectacular Timket (Epiphany) celebrations, or trek to the otherworldly Danakil Depression - the hottest place on Earth. With 9 UNESCO World Heritage Sites, 13 months of sunshine, and 80+ ethnic groups each with distinct traditions, Ethiopia promises journeys that will transform your understanding of Africa.</p>
        </div>
    </section>
 
