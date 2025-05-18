@@ -74,8 +74,8 @@
         </div>
 
         <div class="box">
-            <img src="images/food.png" alt="">
-            <h3>Injera Preparation</h3>
+            <img src="images/injeraaa.jpg" alt="">
+            <h3>Cultural food</h3>
         </div>
 
         <div class="box">
