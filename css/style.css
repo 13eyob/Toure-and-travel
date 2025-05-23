@@ -193,6 +193,17 @@ section {
 .home {
     padding: 0;
     margin-top: 8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.home .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.home .swiper-wrapper {
+    transition-timing-function: linear;
 }
 
 .home .slide {
@@ -256,11 +267,56 @@ section {
     height: 1.5rem;
     width: 1.5rem;
     background: var(--white);
+    opacity: 0.7;
 }
 
 .swiper-pagination-bullet-active {
     background: var(--main-color);
+    opacity: 1;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home {
+        margin-top: 6rem;
+    }
+    
+    .home .slide {
+        min-height: 60vh;
+    }
+    
+    .home .slide .content span {
+        font-size: 1.8rem;
+    }
+    
+    .home .slide .content h3 {
+        font-size: 7vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .home .slide {
+        min-height: 50vh;
+    }
+    
+    .home .slide .content span {
+        font-size: 1.5rem;
+    }
+    
+    .swiper-pagination-bullet {
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+/* Autoplay for 5 seconds transition */
+.swiper {
+    --swiper-navigation-color: #fff;
+    --swiper-pagination-color: var(--main-color);
+    --swiper-autoplay-delay: 5000; /* 5 seconds */
+}
+
+
 
 /* Services Section */
 .service {

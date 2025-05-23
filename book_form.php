@@ -23,6 +23,7 @@ if(isset($_POST['send'])) {
     $guests = (int)$_POST['guests'];
     $arrivals = $_POST['arrivals'];
     $leaving = $_POST['leaving'];
+   
 
     // Validate required fields
     $errors = [];

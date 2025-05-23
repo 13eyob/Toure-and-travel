@@ -24,8 +24,9 @@ $result = $conn->query($sql);
     <title>Booking Records</title>
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/booking.css">
-    <link rel="stylesheet" href="css/admin.css">
+    <!-- <link rel="stylesheet" href="booking.css"> -->
+      <link rel="stylesheet" href="css/admin.css"> 
+     <link rel="stylesheet" href="css/user,mess,booking.css">
 </head>
 <body>
 
@@ -47,7 +48,10 @@ $result = $conn->query($sql);
     </nav>
 
 
-
+<div class="logout">
+        <div class="login_header">
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
 
 
 <?php if ($result && $result->num_rows > 0): ?>

@@ -1,52 +1,87 @@
-/* book section starrs */
-
-
-.booking .book-form{
+/* book section starts */
+.booking .book-form {
     padding: 2rem;
     background: var(--light-bg);
+    position: relative; /* For positioning messages */
 }
 
-.booking .book-form .flex{
+.booking .book-form .flex {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
-.booking .book-form .flex .inputBox{
+.booking .book-form .flex .inputBox {
     flex: 1 1 41rem;
 }
 
-.booking .book-form .flex .inputBox input{
+.booking .book-form .flex .inputBox input {
     width: 100%;
     padding: 1.2rem 1.4rem;
     font-size: 1.6rem;
     color: var(--light-black);
     text-transform: none;
     margin-top: 1.5rem;
-    border: var(--border); 
+    border: var(--border);
+    transition: all 0.3s ease;
 }
 
-.booking .book-form .flex .inputBox input:focus{
+.booking .book-form .flex .inputBox input:focus {
     background: var(--black);
     color: var(--white);
 }
 
-
-.booking .book-form .flex .inputBox input:focus::placeholder{
+.booking .book-form .flex .inputBox input:focus::placeholder {
     background: var(--black);
     color: var(--light-white);
-
 }
 
-.booking .book-form .flex .inputBox span{
-    font-size:1.5rem;
+.booking .book-form .flex .inputBox span {
+    font-size: 1.5rem;
     color: var(--light-black);
 }
 
-.booking .book-form .btn{
-    margin-top:var(--light-black) ;
+.booking .book-form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
+/* Message styles */
+.booking .message {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+}
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.booking .success-message{
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.booking .error-message {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+/* Error highlighting for invalid fields */
+.booking .book-form .inputBox.error input {
+    border-color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+.booking .book-form .inputBox.error span {
+    color: #dc3545;
+}
 
 /* book section ends */

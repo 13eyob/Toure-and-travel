@@ -8,11 +8,14 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css " />
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/stylee.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -22,7 +25,8 @@
     <nav class="navbar">
         <a href="home.php">Home</a>
         <a href="about.php">About</a>
-         <a href="contact.php">Contact</a>
+        <a href="contact.php">Contact</a>
+        <a href="gallery.php">Gallery</a>
         <a href="login_register.php" class="login-btn">Login</a>
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
@@ -114,7 +118,6 @@
                 <h3>Lalibela Rock Churches</h3>
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Amhara Region, Ethiopia</div>
                 <p>Explore the 11 medieval monolithic cave churches carved entirely from rock.</p>
-                <div class="price">From $299 <span>$399</span></div>
                 <a href="login_register.php" class="btn">login</a>
             </div>
         </div>
@@ -125,7 +128,6 @@
                 <h3>Fasil Ghebbi Castle</h3>
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Gondar, Ethiopia</div>
                 <p>Visit the 17th-century fortress city of Gondar with its impressive castles and history.</p>
-                <div class="price">From $249 <span>$329</span></div>
                 <a href="login_register.php" class="btn">login</a>
             </div>
         </div>
@@ -136,7 +138,6 @@
                 <h3>Aksum Historical Tour</h3>
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Tigray Region, Ethiopia</div>
                 <p>Discover the ancient kingdom of Aksum with its obelisks and legends.</p>
-                <div class="price">From $349 <span>$449</span></div>
                 <a href="login_register.php" class="btn">Login </a>
             </div>
         </div>
@@ -147,7 +148,6 @@
                 <h3>Simien Mountains Trek</h3>
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Simien National Park</div>
                 <p>3-day trekking adventure to see geladas, walia ibex, and stunning cliffs.</p>
-                <div class="price">From $499 <span>$599</span></div>
                 <a href="login_register.php" class="btn">Login </a>
             </div>
         </div>
@@ -158,7 +158,7 @@
                 <h3>Sof Omar Cave Exploration</h3>
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Bale Zone, Ethiopia</div>
                 <p>Explore Africa’s largest cave system with a guide and headlamp.</p>
-                <div class="price">From $199 <span>$279</span></div>
+               
                 <a href="login_register.php" class="btn">Login </a>
             </div>
         </div>
@@ -169,7 +169,7 @@
                 <h3>Blue Nile Falls Adventure</h3>
                 <div class="location"><i class="fas fa-map-marker-alt"></i> Near Bahir Dar</div>
                 <p>Day trip to "Smoking Water" falls and a boat ride to Lake Tana monasteries.</p>
-                <div class="price">From $179 <span>$249</span></div>
+                
                 <a href="login_register.php" class="btn">Login</a>
             </div>
         </div>
@@ -219,11 +219,28 @@
 <!-- Footer Section ends -->
 
 <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
 
 <!-- Custom JS -->
-<script src="js/script.js"></script>
+<script src="js/scriptt.js"></script>
 
 
+<script>
+//     document.addEventListener('DOMContentLoaded', function() {
+//     var swiper = new Swiper('.home-slider', {
+//         loop: true,
+//         grabCursor: true,
+//         effect: 'fade',
+//         autoplay: {
+//             delay: 5000,
+//             disableOnInteraction: false,
+//         },
+//         pagination: {
+//             el: '.swiper-pagination',
+//             clickable: true,
+//         },
+//     });
+// });
+</script>
 </body>
 </html>

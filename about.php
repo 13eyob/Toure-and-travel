@@ -9,8 +9,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/stylee.css">
-     <link rel="stylesheet" href="css/about.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
    <!-- Header Section -->
@@ -20,6 +20,7 @@
            <a href="home.php">Home</a>
            <a href="about.php" class="active">About</a>
            <a href="contact.php">Contact</a>
+           <a href="gallery.php">Gallery</a>
            <a href="login_register.php" class="login-btn">Login</a>
        </nav>
        <div id="menu-btn" class="fas fa-bars"></div>

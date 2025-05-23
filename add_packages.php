@@ -146,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_packages'])) {
                         <input type="text" name="location" id="location" required>
                     </div>
                     <div class="products">
-                        <label for="duration">Duration (days)</label>
+                        <label for="duration">Duration (hour)</label>
                         <input type="number" name="duration" id="duration" min="1" required>
                     </div>
                     <div class="products">

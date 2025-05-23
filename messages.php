@@ -34,8 +34,8 @@ $messages = $conn->query("SELECT * FROM contact ORDER BY id DESC");
 <head>
 
     <title>Manage Contact Messages</title>
-      <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/messages.css"> 
+        <link rel="stylesheet" href="css/admin.css"> 
+       <link rel="stylesheet" href="css/user,mess,booking.css">
 </head>
 <body>
 
@@ -62,7 +62,6 @@ $messages = $conn->query("SELECT * FROM contact ORDER BY id DESC");
         <div class="login_header">
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
-
 
 <?php if ($success): ?>
     <div class="success"><?= $success ?></div>

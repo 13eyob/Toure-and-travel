@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>User Records</title>
-    <style>
+    <!-- <style>
         body {
             font-family: Arial, sans-serif;
             background: #f4f4f4;
@@ -55,8 +55,9 @@ $result = $conn->query($sql);
             margin-top: 20px;
             border: 1px solid #f5c6cb;
         }
-    </style>
- <link rel="stylesheet" href="css/admin.css">
+    </style> -->
+<link rel="stylesheet" href="css/user,mess,booking.css">
+<link rel="stylesheet" href="css/admin.css"> 
 </head>
 <body>
 
