@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Travel Ethiopia</title>
+    <title>Contact Us - Travel Ethiopia</title>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- Font Awesome -->
@@ -100,7 +100,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <?php endif; ?>
 
   <form action="contact.php" method="POST">
-
         <input type="text" name="name" placeholder="Your Full Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -141,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
             <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
             <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="https://t.me/eyu13_a" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
         </div>
 
     </div>

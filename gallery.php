@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Gallary</title>
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -145,7 +145,7 @@
             <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
             <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
             <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+           <a href="https://t.me/eyu13_a" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
         </div>
 
     </div>

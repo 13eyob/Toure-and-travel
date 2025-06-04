@@ -74,7 +74,7 @@
                <a href="#"> <i class="fab fa-facebook-f"></i> facebook</a>
                <a href="#"> <i class="fab fa-twitter"></i> twitter</a>
                <a href="#"> <i class="fab fa-instagram"></i> instagram</a>
-               <a href="#"> <i class="fab fa-telegram"></i> telegram</a>
+               <a href="https://t.me/eyu13_a" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
            </div>
        </div>
 

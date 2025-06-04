@@ -22,40 +22,6 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>User Records</title>
-    <!-- <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ccc;
-        }
-        th {
-            background: #007BFF;
-            color: white;
-        }
-        tr:hover {
-            background: #f1f1f1;
-        }
-        .no-data {
-            padding: 20px;
-            background-color: #ffe6e6;
-            color: #a94442;
-            margin-top: 20px;
-            border: 1px solid #f5c6cb;
-        }
-    </style> -->
 <link rel="stylesheet" href="css/user,mess,booking.css">
 <link rel="stylesheet" href="css/admin.css"> 
 </head>

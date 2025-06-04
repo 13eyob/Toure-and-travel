@@ -133,7 +133,7 @@ if(isset($_GET['search'])) {
             <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
             <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
             <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+           <a href="https://t.me/eyu13_a" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
         </div>
 
     </div>
