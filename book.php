@@ -64,11 +64,11 @@ unset($_SESSION['form_data']);
            <div class="flex">
                <div class="inputBox">
                    <span>name :</span>
-                   <input type="text" placeholder="enter your name" name="name" value="<?php echo isset($form_data['name']) ? htmlspecialchars($form_data['name']) : ''; ?>">
+                   <input type="text" placeholder="enter your name" name="name" value="<?php echo isset($form_data['name']) ? htmlspecialchars($form_data['name']) : ''; ?>" required>
                </div>
                <div class="inputBox">
                    <span>email :</span>
-                   <input type="email" placeholder="enter your email" name="email" value="<?php echo isset($form_data['email']) ? htmlspecialchars($form_data['email']) : ''; ?>">
+                   <input type="email" placeholder="enter your email" name="email" value="<?php echo isset($form_data['email']) ? htmlspecialchars($form_data['email']) : ''; ?>" required>
                </div>
                <div class="inputBox">
                    <span>phone :</span>
@@ -76,23 +76,23 @@ unset($_SESSION['form_data']);
                </div>
                <div class="inputBox">
                    <span>address :</span>
-                   <input type="text" placeholder="enter your address" name="address" value="<?php echo isset($form_data['address']) ? htmlspecialchars($form_data['address']) : ''; ?>">
+                   <input type="text" placeholder="enter your address" name="address" value="<?php echo isset($form_data['address']) ? htmlspecialchars($form_data['address']) : ''; ?>" required>
                </div>
                <div class="inputBox">
                    <span>where to:</span>
-                   <input type="text" placeholder="place you want to visit" name="location" value="<?php echo isset($form_data['location']) ? htmlspecialchars($form_data['location']) : ''; ?>">
+                   <input type="text" placeholder="place you want to visit" name="location" value="<?php echo isset($form_data['location']) ? htmlspecialchars($form_data['location']) : ''; ?>" required>
                </div>
                <div class="inputBox">
                    <span>how many :</span>
-                   <input type="number" placeholder="number of guests" name="guests" min="1" value="<?php echo isset($form_data['guests']) ? htmlspecialchars($form_data['guests']) : ''; ?>">
+                   <input type="number" placeholder="number of guests" name="guests" min="1" value="<?php echo isset($form_data['guests']) ? htmlspecialchars($form_data['guests']) : ''; ?>" required>
                </div>
                <div class="inputBox">
                    <span>arrivals :</span>
-                   <input type="date" name="arrivals" value="<?php echo isset($form_data['arrivals']) ? htmlspecialchars($form_data['arrivals']) : ''; ?>">
+                   <input type="date" name="arrivals" value="<?php echo isset($form_data['arrivals']) ? htmlspecialchars($form_data['arrivals']) : ''; ?>" required>
                </div>
                <div class="inputBox">
                    <span>leaving :</span>
-                   <input type="date" name="leaving" value="<?php echo isset($form_data['leaving']) ? htmlspecialchars($form_data['leaving']) : ''; ?>">
+                   <input type="date" name="leaving" value="<?php echo isset($form_data['leaving']) ? htmlspecialchars($form_data['leaving']) : ''; ?>" required>
                </div>
            </div>
            <input type="submit" value="submit" class="btn" name="send">

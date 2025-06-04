@@ -37,7 +37,7 @@ if(isset($_GET['search'])) {
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/package.css">
-    <link rel="stylesheet" href="css/stylee.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
